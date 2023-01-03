@@ -1,8 +1,8 @@
 #define STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "Image.h"
-#include "stb_image.h"
-#include "stb_image_write.h"
+#include "../lib/stb_image.h"
+#include "../lib/stb_image_write.h"
 #include <iostream>
 
 Image::Image(const char *filename){
@@ -30,6 +30,5 @@ bool Image::read(const char *filename){
 };
 
 int Image::readPixel(int pixel){
-    //std::cout << data[pixel] + data[pixel + 1] + data[pixel + 2] << std::endl;
     return (data[pixel] + data[pixel + 1] + data[pixel + 2]) / 3;
 };
