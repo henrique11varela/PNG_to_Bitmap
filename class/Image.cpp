@@ -5,7 +5,7 @@
 #include "../lib/stb_image_write.h"
 #include <iostream>
 
-Image::Image(const char *filename){
+Image::Image(const char *filename){ // ! Constructor
     if (read(filename)){
         std::cout << "Read: " << filename << std::endl;
         size = w * h * channels;
@@ -15,20 +15,15 @@ Image::Image(const char *filename){
     };
 };
 
-Image::Image(int w, int h, int channels){
-    size = w * h * channels;
-    data = new uint8_t[size];
-};
-
-Image::~Image(){
+Image::~Image(){ // ! Destructor
     stbi_image_free(data);
 };
 
-bool Image::read(const char *filename){
+bool Image::read(const char *filename){ // ! Reads image
     data = stbi_load(filename, &w, &h, &channels, 0);
     return data != NULL;
 };
 
-int Image::readPixel(int pixel){
-    return (data[pixel] + data[pixel + 1] + data[pixel + 2]) / 3;
+int Image::readPixel(int pixel){ // ! Reads pixel and returns 0 if black or the sum of rgb values if not black
+    return (data[pixel] + data[pixel + 1] + data[pixel + 2]);
 };
