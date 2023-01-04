@@ -1,6 +1,7 @@
 #include "class/Image.h"
 #include <iostream>
 #include <iomanip>
+#include <string>
 #include <fstream>
 
 std::string Pnp_to_Bitmap(const char *imgName) // ! turns pixel info to bitmap
