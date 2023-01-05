@@ -23,7 +23,7 @@ std::string Pnp_to_Bitmap(const char *imgName) // ! turns pixel info to bitmap
 
     std::string output = fileName;
 
-    output += ": ";
+    output += ": \n";
 
     for (int i = 0; i < (img.w * img.h); i++) // from array to string
     {
@@ -41,7 +41,7 @@ std::string Pnp_to_Bitmap(const char *imgName) // ! turns pixel info to bitmap
         else
             output += X;
     }
-    output += "\n";
+    output += "\n\n";
     return output; // * return
 };
 
