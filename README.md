@@ -16,5 +16,7 @@ There are some test images inside the folder 'img_examples'
 
 ![](other/screenshot.png)
 
+![](other/outcome.jpg)
+
 [Youtube Playlist Followed for Image Manipulation](https://www.youtube.com/playlist?list=PLG5M8QIx5lkzdGkdYQeeCK__As6sI2tOY)
 
