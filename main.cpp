@@ -67,12 +67,12 @@ int main(int argc, char const *argv[])
         images[i - 1] = Pnp_to_Bitmap(argv[i]);
     }
 
-    std::cout << "\nThe output is in 'output.txt'\n\n";
+    std::cout << "\nThe output is in 'output.txt'\n\nGithub: henrique11varela\n\n";
 
     std::ofstream outputFile; //file intance
     outputFile.open("output.txt");
 
-    outputFile << "Each line is from an image.\n\n";
+    outputFile << "Each line is from an image.\n\nGithub: henrique11varela\n\n";
 
     for (int i = 0; i < argc - 1; i++)
     {
